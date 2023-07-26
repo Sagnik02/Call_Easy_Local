@@ -6,7 +6,7 @@ from datetime import timedelta
 
 app = Flask(__name__)
 
-app.secret_key = 'Tele_SECRET_KEY'
+app.secret_key = 'SECRET_KEY'
 app.permanent_session_lifetime = timedelta(minutes=1)
 
 
