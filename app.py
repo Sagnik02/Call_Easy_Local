@@ -1,4 +1,4 @@
-from flask import Flask,request, render_template,redirect, url_for ,request, session
+ffrom flask import Flask,request, render_template,redirect, url_for ,request, session
 from pymongo import MongoClient
 from bson.objectid import ObjectId
 from datetime import timedelta
@@ -76,7 +76,6 @@ def seecontacts():
     contact_collection = db_name['Contact']
     
     contacts = contact_collection.find({'user_email': user_email})
-
     image_path = url_for('static', filename='download.jpg')
     return render_template('seecontact.html', contacts=contacts, image_path=image_path)
 
@@ -116,6 +115,26 @@ def authenticate():
         return redirect(url_for('home_page'))
     else:
         return redirect(url_for('login_page'))
+    
+@app.route('/delete_contact/<string:contact_id>', methods=['POST'])
+def delete_contact(contact_id):
+    if 'email' not in session:
+        return redirect(url_for('login_page'))
+
+    # Retrieve the user's email from the session
+    user_email = session['email']
+    
+    # Retrieve the contact from the database using the provided contact_id and the user's email
+    db_name = get_database()
+    contact_collection = db_name['Contact']
+    
+    contact = contact_collection.find_one({'_id': ObjectId(contact_id), 'user_email': user_email})
+
+    if contact:
+        # Delete the contact from the database
+        contact_collection.delete_one({'_id': ObjectId(contact_id)})
+    
+    return redirect(url_for('seecontacts'))
     
 @app.route('/logout')
 def logout():
