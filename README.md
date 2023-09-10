@@ -14,6 +14,10 @@ HOME PAGE :
 SEE CONTACT PAGE :
 ![SEE_CONTACT](https://github.com/Sagnik02/Call_Easy_Local/assets/108208974/34b713a1-e7f0-4168-a231-4e60bcf3c30d)
 
+ADD CONTACT PAGE :
+![ADD_CONTACT](https://github.com/Sagnik02/Call_Easy_Local/assets/108208974/69b099a7-372a-4ff2-b8c9-45dfbb2b48e8)
+
+
 
 
 
