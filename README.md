@@ -8,6 +8,9 @@ SIGN UP PAGE :
 LOGIN PAGE :
 ![LOGIN](https://github.com/Sagnik02/Call_Easy_Local/assets/108208974/8fc049af-c606-4efa-83b8-e793d7b4119a)
 
+HOME PAGE :
+![Home](https://github.com/Sagnik02/Call_Easy_Local/assets/108208974/50f76a7d-695e-4331-827e-6281dff7a42a)
+
 SEE CONTACT PAGE :
 ![SEE_CONTACT](https://github.com/Sagnik02/Call_Easy_Local/assets/108208974/34b713a1-e7f0-4168-a231-4e60bcf3c30d)
 
